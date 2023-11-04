@@ -1,5 +1,490 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+html{
+  font-family: var(--main-font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: var(--line-height);
+}
 
 .page {
+  display: grid;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--background-color);
+  color: var(--main-color);
+  padding: 20px;
+  background-image: var(--background-image); /*Только для dark*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-inline-size: var(--max-size);
+  box-sizing: border-box;
+  font-size: var(--font-size-main);
+}
+
+.header{
+  display: grid;
+  position: relative;
+  justify-content: flex-end;
+  width: var(--max-size);
+}
+
+.header__theme-menu {
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  min-inline-size: var(--max-size);
+}
+
+.header__theme-menu-item {
+  display: inline-block;
+}
+
+.header__theme-menu-list{
+  display: flex;
+  gap: 10px;
+}
+
+.header__theme-menu-button{
+  width: 70px;
+  height: 26px;
+  font-size: var(--font-size-main);
+  
+  text-transform: lowercase;
+  color: var(--decor-color);
+  background-color: transparent;
+  border: transparent;
+}
+
+.header__theme-menu-button:disabled{
+  outline: 1px solid var(--decor-color);
+  pointer-events: none;
+}
+
+.button{
+  cursor: pointer;
+}
+
+.button:hover{
+  outline: 1px solid var( --semi-transparent);
+}
+
+.button:focus {
+  outline: none;
+  text-decoration: underline;
+  
+}
+
+.hidden-element{
+  position: absolute;
+  display: flex;
+  text-transform: uppercase;
+  justify-self: flex-end;
+  color: var(--rec-color);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 40px;
+}
+
+.hidden-element::after{
+  content: ""; 
+  width: 9px; 
+  height: 9px;
+  background-color: var(--rec-color);
+  margin-block-start: auto;
+  margin-block-end: auto;
+  margin-inline-end: -10px;
+  margin-inline-start: 10px;
+  border-radius: 30px;
+}
+
+.label{
+  display: flex;
+  color: var(--label-color);
+  text-shadow: 4px 4px 0px var(--label-shadow);
+  font-family: var(--main-font-family);
+  font-size: var(--font-size-label);
+  font-style: normal;
+  font-weight: bold;
+  margin-block-start: 326px;
+}
+
+.under-label{
+  display: flex;
+  justify-content: flex-end;
+  margin-block-start: 168px;
+  margin-block-end: 134px;
+}
+
+.header-text{
+  background-color: var(--block-color);
+  color: var(--block-accent-color);
+  display: grid;
+  width: 48%;
+  font-weight: bold;
+  margin-inline-end: 20px;
+  font-size: var(--font-size-main);
+}
+
+.decorated-zone{
+  width: var(--max-size);
+}
+
+.decorated-zone::before{
+  display: block;
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  right: 20px;
+  border-inline-end: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
+}
+
+.decorated-zone::after{
+  content: "";
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  left: 20px;
+  bottom: 20px;
+  position: absolute;
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
+}
+
+.main-content{
+  margin-block-start: 60px;
+  display: flex;
+  max-inline-size: var(--max-size);
+}
+
+.text-block{
+  display: flex;
+  width: 100%;
+  margin-inline-end: 20px;
+  margin-inline-start: 10px;
+}
+
+.text-block .card{
+  flex-wrap: wrap;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 8px;
+}
+
+.card_item{
+  width: 100%;
+}
+
+article{
+  background-color: var(--block-color);
+  color: var(--block-accent-color);
+  font-weight: bold;
+  font-size: var(--font-size-main);
+}
+
+.content div{
+  display: flex;
+  width: 100%;
+  flex: 50%;
+  flex-direction: column;
+}
+
+
+.title{
+  color: var(--accent-color);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.title_MC{
+  width: 50%;
+  margin-inline-start: 20px;
+}
+
+
+.title_tips{
+  width: 50%;
+  margin-inline-start: 20px;
+}
+
+.title div{
+  width: 20px;
+}
+
+.cards{
+  max-inline-size: var(--max-size);
+  display:flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin-block-start: 53px;
+  padding: 20px;
+}
+
+.card{
+  display: flex;
+  gap: 14px;
+  list-style: none;
+}
+
+.card_list {
+  width:100%;
+  display: flex;
+}
+
+.cards_title{
+  width: 30%;
+  margin-block-end: 22px;
+}
+
+.cardCards{
+  width: 315px;
+  margin-inline-end: 6px;
+}
+
+.tips{
+  max-inline-size: var(--max-size);
+  margin-block-start: 55px;
+  display: flex;
+}
+
+.tipsContent{
+  margin-block-end: -5px;
+}
+
+.tipscard{
+  margin-block-start: 1px;
+}
+
+.tipsWidth{
+  font-weight: 400;
+}
+
+.pictures{
+  width: var(--max-size);
+  margin-block-start: 50px;
+  padding: 20px;
+  margin-block-end: 40px;
+}
+
+.image_list{
+  object-fit: cover;
+  display: grid;
+  padding-block-start: 10px;
+  /*gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);*/
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
+  grid-template-areas: 
+  "a a b"
+  "d e b"
+  "d c c";
+}
+
+.image_list div{
+  width: fit-content;
+  display: flex;
+}
+
+.image_list img{ 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: var(--max-size);
+}
+
+.image-1{
+  grid-area: a;
+}
+
+.image-2{
+  grid-area: b;
+}
+
+.image-3{
+  grid-area: c;
+
+}
+
+.image-4{
+  grid-area: d;
+
+}
+
+.image-5{
+  grid-area: e;
+  
+}
+.footer{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: var(--max-size);
+  position: relative;
+}
+
+.footer_text{
+  padding-block-start: 28px;
+  margin-block-end: 350px;
+}
+
+.link{
+  width: fit-content;;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px var(--block-color);
+}
+
+.link:hover{
+  outline: none;
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: 1px solid var(--main-color);
+}
+
+.textWlink{
+  display: block;
+}
+
+@media(max-width: 768px)
+{
+  .page{
+    --max-size: 768px;
+    --font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .header{
+    padding-block-end: 50px;
+  }
+  .header__theme-menu{
+    justify-content: flex-end;
+    padding-inline-end: 20px;
+    margin-block-start: 170px;
+  }
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+  .label{
+    margin-block-start: 215px;
+    --font-size-label: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+  .under-label{
+    margin-block-start: 197px;
+  }
+  .header-text{
+    text-align: left;
+    width: 364px;
+  }
+  .text-block{
+    margin-inline-start: 20px;
+  }
+  .card{
+    flex-wrap: wrap;
+  }
+  .card_item{
+    width: 100%;
+    margin-inline-end: 0;
+  }
+  .footer{
+    padding-block-end: 150px;
+  }
+  .footer_text{
+    margin-block-start: 455px;
+  }
+}
+
+
+@media(max-width: 375px)
+{
+  .page{
+    --max-size: 375px;
+    padding: 10px;
+  }
+  .header{
+    width: var(--max-size);
+  }
+  .decorated-zone::after{
+    left: 0;
+  }
+  .header__theme-menu{
+    max-width: var(--max-size);
+    margin-block-start: 65px;
+    padding-inline-end: 10px;
+  }
+  .label{
+    margin-block-start: 67px;
+    --font-size-label: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height:  82.5%;
+    margin-inline-start: 10px;
+  }
+  .under-label{
+    margin-block-start: 55px;
+    margin-block-end: 25px;
+  }
+  .header-text{
+    width: 355px;
+    margin-inline-start: 10px;
+  }
+  .text-block{
+    margin-inline-start: 0px;
+  }
+  .main-content{
+    margin-block-start: 31px;
+    flex-wrap: wrap;
+  }
+  .title_MC{
+    width: 80%;
+    margin-inline-start: 0;
+    margin-block-end: 20px;
+  }
+  .title_tips{
+    width: 97%;
+    margin-inline-start: 0px;
+    margin-block-end: 23px;
+
+  }
+  .cards{
+    padding: 0;
+    margin-block-start: 45px;
+    width: 355px;
+  }
+  .cards_title {
+    width: 80%;
+  }
+  .tips{
+    flex-wrap: wrap;
+    margin-block-start: 40px;
+    width: 100%;
+  }
+  .pictures{
+    margin-block-start: 40px;
+    padding: 0;
+    width: 355px;
+    margin-block-end: 35px;
+  }
+  .image_list{
+    padding-block-start: 0;
+    gap: 10px;
+    grid-template-areas:
+        "a a a"
+        "b b b"
+        "d d d"
+        "e e e"
+        "c c c";
+  }
+  .footer{
+    padding-inline-start: 0;
+  }
+  .footer_text{
+    margin-block-start: 250px;
+    margin-block-end: 140px;
+  }
+
 }
