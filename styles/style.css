@@ -12,7 +12,7 @@ html{
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--background-color);
   color: var(--main-color);
-  padding: 20px;
+  padding-block-start: 20px;
   background-image: var(--background-image); /*Только для dark*/
   background-size: cover;
   background-repeat: no-repeat;
@@ -412,6 +412,7 @@ article{
   }
   .decorated-zone::after{
     left: 0;
+    bottom: 0;
   }
   .header__theme-menu{
     max-width: var(--max-size);
@@ -426,7 +427,7 @@ article{
   }
   .under-label{
     margin-block-start: 55px;
-    margin-block-end: 25px;
+    margin-block-end: 5px;
   }
   .header-text{
     width: 355px;
@@ -436,7 +437,7 @@ article{
     margin-inline-start: 0px;
   }
   .main-content{
-    margin-block-start: 31px;
+    margin-block-start: 51px;
     flex-wrap: wrap;
   }
   .title_MC{
@@ -480,11 +481,13 @@ article{
         "c c c";
   }
   .footer{
+    padding-block-start: 20px;
     padding-inline-start: 0;
+    padding-block-end: 0;
   }
   .footer_text{
     margin-block-start: 250px;
-    margin-block-end: 140px;
+    margin-block-end: 270px;
   }
 
 }
