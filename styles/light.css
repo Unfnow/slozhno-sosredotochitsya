@@ -3,15 +3,8 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-light {
-  --background-color: #FFF1F7;;
-  --accent-color: #ff8dcb;
-  --main-color: #353430;
-  --label-color: #FFC2E6;
-  --semi-transparent:#32312D66;
-}
 .page.theme_light {
-  --background-color: #FFF1F7;;
+  --background-color: #FFF1F7;
   --accent-color: #353430;
   --block-color: #ff8dcb;
   --decor-color: #353430;
@@ -29,7 +22,7 @@
 
 @media (prefers-color-scheme: light) {
   .theme_auto{
-  --background-color: #FFF1F7;;
+  --background-color: #FFF1F7;
   --accent-color: #353430;
   --block-color: #ff8dcb;
   --decor-color: #353430;

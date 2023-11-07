@@ -14,7 +14,8 @@ html{
   color: var(--main-color);
   padding-block-start: 20px;
   background-image: var(--background-image); /*Только для dark*/
-  background-size: cover;
+  /*background-size: cover;*/
+  background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   max-inline-size: var(--max-size);
@@ -26,7 +27,8 @@ html{
   display: grid;
   position: relative;
   justify-content: flex-end;
-  width: var(--max-size);
+  width: 100vh;
+  /*width: var(--max-size);*/
 }
 
 .header__theme-menu {
@@ -81,8 +83,8 @@ html{
   text-transform: uppercase;
   justify-self: flex-end;
   color: var(--rec-color);
-  font-family: IBM Plex Mono;
-  font-size: 18px;
+  font-family:  var(--main-font-family);
+  font-size: var(--font-size-main);
   font-style: normal;
   font-weight: 400;
   margin-right: 40px;
@@ -199,8 +201,8 @@ article{
 
 .title{
   color: var(--accent-color);
-  font-family: IBM Plex Mono;
-  font-size: 18px;
+  font-family: var(--main-font-family);
+  font-size: var(--font-size-main);
   font-style: normal;
   font-weight: 700;
 }
@@ -326,7 +328,7 @@ article{
   padding: 20px;
   display: flex;
   justify-content: center;
-  width: var(--max-size);
+  width: 100vh;
   position: relative;
 }
 
@@ -336,7 +338,7 @@ article{
 }
 
 .link{
-  width: fit-content;;
+  width: fit-content;
   text-decoration: none;
   text-shadow: 1px 1px 0px var(--block-color);
 }
@@ -360,31 +362,39 @@ article{
     --max-size: 768px;
     --font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
   .header{
     padding-block-end: 50px;
   }
+
   .header__theme-menu{
     justify-content: flex-end;
     padding-inline-end: 20px;
     margin-block-start: 170px;
   }
+
   .header__theme-menu-list {
     flex-direction: column;
   }
+
   .label{
     margin-block-start: 215px;
     --font-size-label: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
+
   .under-label{
     margin-block-start: 197px;
   }
+
   .header-text{
     text-align: left;
     width: 364px;
   }
+
   .text-block{
     margin-inline-start: 20px;
   }
+
   .card{
     flex-wrap: wrap;
   }
@@ -392,12 +402,15 @@ article{
     width: 100%;
     margin-inline-end: 0;
   }
+
   .footer{
     padding-block-end: 150px;
   }
+
   .footer_text{
     margin-block-start: 455px;
   }
+
 }
 
 
@@ -407,69 +420,83 @@ article{
     --max-size: 375px;
     padding: 10px;
   }
+
   .header{
     width: var(--max-size);
   }
+
   .decorated-zone::after{
     left: 0;
     bottom: 0;
   }
+
   .header__theme-menu{
     max-width: var(--max-size);
     margin-block-start: 65px;
     padding-inline-end: 10px;
   }
+
   .label{
     margin-block-start: 67px;
     --font-size-label: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     line-height:  82.5%;
     margin-inline-start: 10px;
   }
+
   .under-label{
     margin-block-start: 55px;
     margin-block-end: 5px;
   }
+
   .header-text{
     width: 355px;
     margin-inline-start: 10px;
   }
+
   .text-block{
     margin-inline-start: 0px;
   }
+
   .main-content{
     margin-block-start: 51px;
     flex-wrap: wrap;
   }
+
   .title_MC{
     width: 80%;
     margin-inline-start: 0;
     margin-block-end: 20px;
   }
+
   .title_tips{
     width: 97%;
     margin-inline-start: 0px;
     margin-block-end: 23px;
-
   }
+
   .cards{
     padding: 0;
     margin-block-start: 45px;
     width: 355px;
   }
+
   .cards_title {
     width: 80%;
   }
+
   .tips{
     flex-wrap: wrap;
     margin-block-start: 40px;
     width: 100%;
   }
+
   .pictures{
     margin-block-start: 40px;
     padding: 0;
     width: 355px;
     margin-block-end: 35px;
   }
+
   .image_list{
     padding-block-start: 0;
     gap: 10px;
@@ -480,11 +507,13 @@ article{
         "e e e"
         "c c c";
   }
+
   .footer{
     padding-block-start: 20px;
     padding-inline-start: 0;
     padding-block-end: 0;
   }
+
   .footer_text{
     margin-block-start: 250px;
     margin-block-end: 270px;
