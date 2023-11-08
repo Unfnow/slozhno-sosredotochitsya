@@ -7,6 +7,7 @@
   --background-color: #FFF1F7;
   --accent-color: #353430;
   --block-color: #ff8dcb;
+  --block-accent-color: #353430;
   --decor-color: #353430;
   --label-color: #FFC2E6;
   --main-color: #353430;
@@ -33,4 +34,12 @@
   --background-image: url(../images/cover-image-light.png);
   font-family: inherit;
   }
+
+  @media (max-width: 768px){
+    .page.theme_light{
+      --label-color: #FFC2E6;
+      --label-shadow: #FF8DCB;
+    }
+  }
 }
+
