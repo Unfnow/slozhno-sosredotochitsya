@@ -13,6 +13,8 @@
   --main-color: #F1B2CE;
   --label-color: #DB00FF;
   --label-shadow: #FF0070;
+  --label-color-small: #DB00FF;
+  --label-shadow-small: #FF0070;
   --semi-transparent:#FF007066;
   --rec-color:#FF0070;
   --background-image: url(../images/cover-image-dark.png);
@@ -25,14 +27,16 @@
 @media (prefers-color-scheme: dark) {
   .theme_auto{
     --background-color: #000028;
-  --accent-color: #FF0070;
-  --block-accent-color: #000028;
-  --main-color: #F1B2CE;
-  --label-color: #DB00FF;
-  --semi-transparent:#ff007080;
-  --decor-color:#FF0070;
-  --label-color: #DB00FF;
-  --rec-color:#FF0070;
+    --accent-color: #FF0070;
+    --block-accent-color: #000028;
+    --block-color: #FF0070;
+    --main-color: #F1B2CE;
+    --label-color: #DB00FF;
+    --label-shadow: #FF0070;
+    --label-color-small: #DB00FF;
+    --label-shadow-small: #FF0070;
+    --semi-transparent:#FF007066;
+    --rec-color:#FF0070;
   }
 
   }

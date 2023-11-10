@@ -10,6 +10,8 @@
   --main-color: #F1B2CE;
   --label-color: #DB00FF;
   --label-shadow: #FF0070;
+  --label-color-small: #DB00FF;
+  --label-shadow-small: #FF0070;
   --semi-transparent:#FF007066;
   --rec-color:#FF0070;
   --background-image: url(../images/cover-image-dark.png);
