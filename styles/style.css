@@ -1,8 +1,8 @@
-* {
+/* * {
   border: 1px solid red;
 }
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-html{
+html {
   font-family: var(--main-font-family);
   /*display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ html{
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--background-color);
   color: var(--main-color);
-  padding-block-start: 14px;
+  padding-block-start: 20px;
   background-image: var(--background-image); /*Только для dark*/
   background-size: cover;
   background-position: center;
@@ -32,7 +32,7 @@ html{
   display: grid;
   position: relative;
   box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header__theme-menu {
@@ -111,7 +111,7 @@ html{
   justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap;
-  margin-block-start: 50px;
+  margin-block-start: 43px;
   max-inline-size: var(--max-size);
   margin-inline-start: -10px; /*Возможно об этом пожалею*/
 }
@@ -133,7 +133,7 @@ html{
   display: flex;
   justify-content: flex-end;
   width: 98vw;
-  padding-block-start: 40px;
+  padding-block-start: 35px;
   max-inline-size: inherit;
 }
 
@@ -189,7 +189,7 @@ main {
   max-inline-size: var(--max-size);
 }
 
-.main-content .card_item{
+.main-content .card_item {
   width: 100%;
 }
 
@@ -293,7 +293,7 @@ h4 {
   margin-block-end: 17px;
 }
 
-.cards .card{
+.cards .card {
   gap: 16px;
 }
 
@@ -389,18 +389,43 @@ h4 {
   display: flex;
   justify-content: center;
   width: 98vw;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   align-content: center;
   flex-wrap: wrap;
 }
 
-.footer_text{
-  margin-block-start: 10px;
+.footer-decor {
+  width: 98vw;
+  max-inline-size: var(--max-size);
 }
 
-.footer .decorated-zone::after{
-  bottom: 10px
+.footer-decor::before {
+  display: block;
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  right: 10px;
+  border-inline-end: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
+}
+
+.footer-decor::after {
+  content: "";
+  display: block;
+  left: 9px;
+  bottom: 13px;
+  left: 10px;
+  inline-size: 25px;
+  block-size: 25px;
+  position: absolute;
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
+}
+
+.footer_text {
+  margin-block-start: 10px;
 }
 
 .link {
@@ -436,6 +461,13 @@ h4 {
   .page {
     --max-size:1024px;
   }
+}
+
+@media(min-width: 769px) and (max-width: 1023px)
+{
+  .cards .card_item {
+    width: 100%; 
+}
 }
 
 /*768px X 1024px*/
@@ -516,23 +548,102 @@ h4 {
     margin-block-start: 60px;
   }
 
-  .title .tips{
+  .title .tips {
     margin-inline-start: 9px;
     margin-block-start: -3px;
   }
 
   .footer {
-    align-content: flex-start;
+    align-content: center;
   }
 
   .footer_text {
-    margin-block-start: 435px;
+    
+  }
+
+  .footer-decor::before {
+    right: 11px;
+    top: 18px;
+  }
+
+  .footer-decor::after {
+    bottom: 17px;
+    left: 10px;
+  }
+
+}
+
+@media(min-width: 376px) and (max-width: 767px)
+{
+  .header-text {
+    width: min-content;
+  }
+
+  .main-content {
+    flex-wrap: wrap;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+  }
+
+  .title_MC {
+    width: 100%;
+    margin-inline-start: 0;
+  }
+
+  .text-block {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+
+  .cards_title {
+    width: 100%;
+  }
+
+  .content {
+    text-align: justify;
+  }
+
+  .tips {
+    padding-inline-start: 5px;
+  }
+
+  .title_tips {
+    width: 100%;
+    margin-inline-start: 0;
+  }
+
+  .tips {
+    flex-wrap: wrap;
+  }
+
+  .pictures {
+    margin-block-start: 26px;
+    padding: 0;
+    padding-inline-start: 3px;
+    padding-inline-end: 5px;
+    width: 98vw;
+    margin-block-end: 35px;
+
+  }
+
+  .image_list {
+    padding-block-start: 0;
+    gap: 8px;
+    grid-template-areas:
+        "a a a"
+        "b b b"
+        "d d d"
+        "e e e"
+        "c c c";
+  }
+
+  .footer {
+    align-items: center;
   }
 
 }
 
 /*375px X 668px  */
-
 
 @media(max-width: 375px)
 {
@@ -556,7 +667,7 @@ h4 {
     bottom: 18px;
   }
 
-  .header__theme-menu{
+  .header__theme-menu {
     max-width: 98vw;
     margin-block-start: 60px;
     padding-inline-end: 0px;
@@ -572,56 +683,57 @@ h4 {
     margin-block-end: 28px;
   }
 
-  .label{
+  .label {
     margin-block-start: 63px;
     --font-size-label: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     line-height:  82.5%;
   }
 
-  .under-label{
+  .under-label {
     margin-block-end: 9px;
   }
 
-  .text-block{
+  .text-block {
     margin-inline-start: -3px;
     margin-block-start: -6px;
   }
 
-  main{
+  main {
     margin-block-start: 0;
   }
 
-  .main-content{
+  .main-content {
     margin-block-start: 29px;
     margin-inline-start: 5px;
     flex-wrap: wrap;
   }
 
-  .title_MC{
+  .title_MC {
     width: 80%;
     margin-inline-start: 0;
     margin-block-end: 20px;
   }
 
-  .cards{
+  .cards {
     padding: 0;
-    margin-block-start: 33px;
-    margin-inline-start: -12px;
+    margin-block-start: 37px;
   }
 
-  .card_holder{
+  .card_holder {
     width: 100%;
+    margin-block-start: -2px;
   }
 
   .cards_title {
     width: 80%;
+    margin-inline-start: 2px;
   }
 
   .tips {
     flex-wrap: wrap;
-    margin-block-start: 28px;
+    margin-block-start: 27px;
     width: 100%;
-    margin-inline-start: -4px;
+    margin-inline-start: 6px;
   }
 
   .tips .text-block {
@@ -630,7 +742,7 @@ h4 {
   }
 
   .tips h3 {
-    margin-inline-end: 12px;
+    margin-inline-end: 5px;
   }
 
   .title_tips {
@@ -639,21 +751,27 @@ h4 {
     margin-block-end: 23px;
   }
 
+  .tipscard {
+    margin-block-start: 2px;
+  }
+
   .card_item {
     margin-inline-end: 0;
   }
 
   .pictures {
-    margin-block-start: 40px;
+    margin-block-start: 26px;
     padding: 0;
+    padding-inline-start: 3px;
+    padding-inline-end: 5px;
     width: 98vw;
     margin-block-end: 35px;
-    margin-inline-end: 0;
+
   }
 
   .image_list {
     padding-block-start: 0;
-    gap: 10px;
+    gap: 8px;
     grid-template-areas:
         "a a a"
         "b b b"
@@ -663,14 +781,24 @@ h4 {
   }
 
   .footer {
-    padding-block-start: 20px;
-    padding-inline-start: 0;
     padding-block-end: 10px;
+    padding-block-start: 14px;
   }
 
   .footer_text {
-    margin-block-start: 265px;
-    margin-block-end: 270px;
+    margin-block-start: 275px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-decor::before {
+    right: 7px;
+    top: 10px;
   }
   
+  .footer-decor::after {
+    bottom: 10px;
+    left: 4px;
+  }
+
 }
