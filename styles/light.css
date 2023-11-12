@@ -26,16 +26,19 @@
 
 @media (prefers-color-scheme: light) {
   .theme_auto{
-  --background-color: #FFF1F7;
-  --accent-color: #353430;
-  --block-color: #ff8dcb;
-  --decor-color: #353430;
-  --label-color: #FFC2E6;
-  --main-color: #353430;
-  --rec-color: transparent;
-  --semi-transparent:#32312D66;
-  --background-image: url(../images/cover-image-light.png);
-  font-family: inherit;
+    --background-color: #FFF1F7;
+    --accent-color: #353430;
+    --block-color: #ff8dcb;
+    --block-accent-color: #353430;
+    --decor-color: #353430;
+    --label-color: #FFC2E6;
+    --label-shadow: #FF0070;
+    --label-color-small: #FFC2E6;
+    --label-shadow-small: #FF8DCB;
+    --main-color: #353430;
+    --rec-color: transparent;
+    --semi-transparent:#32312D66;
+    --background-image: url(../images/cover-image-light.png);
+    font-family: inherit;
   }
 }
-
