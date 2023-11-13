@@ -277,6 +277,7 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
 .card {
@@ -312,7 +313,7 @@ h4 {
 
 .title_tips {
   width: 50%;
-  margin-inline-start: 6px;
+  margin-inline-start: 9px;
 }
 
 
@@ -490,6 +491,11 @@ h4 {
     padding-block-end: 50px;
   }
 
+  .decorated-zone::after {
+    left: 11px;
+    bottom: 35px;
+  }
+
   .header__theme-menu {
     justify-content: flex-end;
     padding-inline-end: 10px;
@@ -617,12 +623,61 @@ h4 {
 
 @media(min-width: 376px) and (max-width: 767px)
 {
-  .label-box {
-    margin-inline-start: 0px;
+  
+  .page {
+    padding-block-start: 10px;
+    justify-content: normal;
+  }
+
+  .header {
+    width: 98vw;
+    margin-inline-end: -6px;
+  }
+
+  .header__theme-menu-list {
+    margin-inline-end: 10px;
+    margin-block-start: 3px;
+  }
+
+  .decorated-zone::before {
+    top: 0;
+}
+
+  .decorated-zone::after {
+    left: 0;
+    bottom: 18px;
+  }
+
+  .header__theme-menu {
+    max-width: 98vw;
+    margin-block-start: 60px;
+    padding-inline-end: 0px;
   }
 
   .header-text {
-    width: min-content;
+    width: 100%;
+  }
+
+  .label-box {
+    margin-inline-start: 2px;
+    margin-block-start: 4px;
+    margin-block-end: 28px;
+  }
+
+  .label {
+    margin-block-start: 63px;
+    --font-size-label: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height:  82.5%;
+  }
+
+  .under-label {
+    margin-block-end: 9px;
+    margin-inline-start: 2px;
+  }
+
+  .text-block {
+    margin-inline-start: 2px;
+    margin-block-start: 0px;
   }
 
   .main-content {
@@ -630,6 +685,10 @@ h4 {
     padding-inline-start: 15px;
     padding-inline-end: 15px;
   }
+
+  .main-content .card_item {
+    padding-inline-end: 0;
+}
 
   .title_MC {
     width: 80%;
@@ -710,6 +769,10 @@ h4 {
     margin-block-start: 3px;
   }
 
+  .decorated-zone::before {
+    top: 0;
+}
+
   .decorated-zone::after {
     left: 0;
     bottom: 18px;
@@ -757,6 +820,10 @@ h4 {
     flex-wrap: wrap;
   }
 
+  .main-content .card_item {
+    padding-inline-end: 0;
+  }
+
   .title_MC {
     width: 80%;
     margin-inline-start: 0;
@@ -770,7 +837,6 @@ h4 {
   }
 
   .card_holder {
-    width: 100%;
     margin-block-start: -2px;
   }
 
